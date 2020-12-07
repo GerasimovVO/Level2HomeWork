@@ -7,9 +7,11 @@ public class Main {
             for (int j = 0; j < goodArray.length; j++) {
                 int r =(int)(Math.random()*10) + 1;
                 goodArray[i][j] = String.valueOf(r);
+                goodArray[1][1] = "dsfs";
 
             }
         }
+
 
         System.out.println(sumElementArray(goodArray));
 
@@ -29,8 +31,8 @@ public class Main {
                     sum += value;
 
                 } catch (NumberFormatException e) {
-                    String message = "в ячейке [" +String.valueOf(i) + "][" + String.valueOf(j)  + "]";
-                    throw new MyArrayDataException(message);
+                    String message = "в ячейке [" + String.valueOf(i) + "][" + String.valueOf(j)  + "]";
+                    throw new MyArrayDataException(message, e);
                 }
 
             }
